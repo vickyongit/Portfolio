@@ -1,0 +1,157 @@
+@keyframes ultraDarkWave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.hero-page {
+    height: 700px;
+    animation: ultraDarkWave 10s ease infinite;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(135deg, #ffffff, #eeeeee);
+
+    @media (max-width: 700px) {
+        min-height: 800px;   
+     }
+
+}
+
+
+.hero-intro-container{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 700px;
+    margin-top: 30px;
+    display: flex;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+}
+
+.info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
+    @media (max-width: 700px) {
+     order: 1;
+     width: 90%;
+    }
+
+    @media ((min-width: 701px) and (max-width: 1000px) ) {
+        width: 40%;
+    }
+}
+
+.image-container {
+    width: 50%;
+    text-align: center;
+
+    @media (max-width: 700px) {
+    order: 0;
+    width: 100%;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    }
+
+    @media ((min-width: 701px) and (max-width: 1000px) ) {
+        width: 55%;
+        z-index: 1;
+    }
+}
+
+.greeting {
+    color: grey;
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: 20px;
+
+    @media (max-width: 700px) {
+        font-size: 23px;
+        margin-left: 0px;
+    }
+}
+
+
+.hero-name {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 95px;
+    color: black;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+
+    @media (max-width: 700px) {
+        font-size: 50px;
+    }
+    
+}
+
+.job-role {
+    color: grey;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin: 15px;
+
+    @media (max-width: 700px) {
+        font-size: 20px;
+        white-space: wrap;  
+        letter-spacing: 6px;
+        text-align: center;
+     }
+}
+
+.line {
+    color: grey;
+    width: 100%;
+    
+    @media (max-width: 700px) {
+        margin-top: 0px;
+    }
+}
+
+.hero-img {
+    padding: 0px;
+    width:80%;
+    height: 98%;
+    margin-bottom: 0px;
+
+    @media ((min-width: 701px) and (max-width: 1000px) ) {
+        width: 100%;
+    }
+ }
+
+.social-media-icons-container {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+
+    @media (max-width: 700px) {
+        justify-content: center;
+     }
+}
+
+.social-icons {
+    font-size: 30px;
+    margin-right: 20px;
+    color: black;
+}

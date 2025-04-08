@@ -1,0 +1,56 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.skills-ul {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+    gap: 30px;
+    @media (max-width: 700px) {
+        width: 90%;
+    }
+}
+
+.skill-li {
+    list-style-type: none;
+    text-align: center;
+    width: 25%;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    @media (max-width: 700px) {
+        width: 20%;
+    }
+} 
+
+.skill-logo{ 
+    width: 50%;
+    transition: transform 0.3s ease;
+
+    @media (max-width: 700px) {
+        width: 80%;
+    }
+}
+
+/* Shake and zoom effect */
+.skill-li:hover .skill-logo {
+  animation: shakeZoom 0.4s ease;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+
+}
+
+@keyframes shakeZoom {
+  0% { transform: translate(0, 0) scale(1.05); }
+  25% { transform: translate(-2px, 2px) scale(1.1); }
+  50% { transform: translate(2px, -2px) scale(1.1); }
+  75% { transform: translate(-2px, 2px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1.1); }
+}
