@@ -4,6 +4,7 @@ import Heading from '../StyledComponents'
 import { FaCloudDownloadAlt } from "react-icons/fa";
 
 import AnimatedProgressBar from '../AnimatedProgressBar';
+import AnimatedCounter from '../AnimatedCounter';
 import './index.css'
 
 const About = () => {
@@ -15,9 +16,10 @@ const About = () => {
         link.click()
         document.body.removeChild(link);
     }
+
     return (
         <Element name="about">
-    <div id="about" className='about-container'>
+        <div id="about" className='about-container'>
         <Heading>About me</Heading> <hr className='second-line '/>
         <div className='flex-container'>
             <div className='about-paragraph-container'>
@@ -57,16 +59,24 @@ This is just the beginning.
                     <AnimatedProgressBar percent={68} color="grey" />
 
                 </li>
-                <li className='specialized-in-li'>
-                    
-                    <p className='specialized-in-txt'>Music Producer</p>
-                    <AnimatedProgressBar percent={58} color="grey" />
-
-                </li>
             </ul>
             </div>
 
         </div>
+        <ul className='why-me-ul'>
+            <li className='why-me-li'>
+                <span className='why-me-span'> <AnimatedCounter end={600}/> </span> < br />
+                Hours of Coding
+            </li>
+            <li className='why-me-li'>
+            <span className='why-me-span'> <AnimatedCounter end={12700}/> </span> <br />
+                Problems Solved
+            </li>
+            <li className='why-me-li'>
+            <span className='why-me-span'> <AnimatedCounter end={12}/> </span> <br />
+                Certified Courses
+            </li>
+        </ul>
 
     </div>
     </Element>

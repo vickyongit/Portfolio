@@ -37,6 +37,7 @@ const Contact = () => {
         })
     } else {
         alert("Hey! You've already reached out 🙂 I'll get back to you soon!.")
+        form.current.reset()
     }
     }
 
@@ -44,9 +45,9 @@ const Contact = () => {
     <div id="contact" className='contact-container'>
         <Heading>Contact</Heading> <hr className='second-line' />
         <form ref={form} onSubmit={sendEmail} className='contact-card'>
-            <input className='input-element' name="name"  type="text" placeholder='Name / Company' required/>
+            <input autoComplete='on' className='input-element' name="name"  type="text" placeholder='Name / Company' required/>
             <input className='input-element' name="ph_number"  type="number" placeholder='Phone Number (Optional)'/>
-            <input className='input-element' name="email" type="email" placeholder='Email' required/>
+            <input autoComplete='on' className='input-element' name="email" type="email" placeholder='Email' required/>
             <input className='input-element' name="subject" type="text" placeholder='Subject' required/>
             <textarea className='textarea-element' name="message" placeholder='Message:' required/>
             <button type="submit" className='send-message-btn'>Send Message</button>

@@ -15,10 +15,10 @@ const HomePage = () => (
             <hr className="line" />
             <div className="social-media-icons-container">
                 <a href="mailto:vignesh.bkprof@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <BiLogoGmail className="social-icons" />
+                    <BiLogoGmail className="social-icons-email" />
                 </a>
                 <a href="https://www.linkedin.com/in/vignesh-bk" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="social-icons" />
+                <FaLinkedin className="social-icons-linkedin" />
                 </a>
             </div>
             </div>

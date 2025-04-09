@@ -41,7 +41,7 @@ const skillsList = [
         <Heading>Skills</Heading> <hr className='second-line'></hr>
     <ul className='skills-ul'>
     {skillsList.map(each => (
-        <li className='skill-li'>
+        <li key={each.name} className='skill-li'>
             <img src={each.logo} alt={each.name} className='skill-logo' />
         </li>
     ))}

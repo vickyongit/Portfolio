@@ -40,6 +40,7 @@
 }
 
 .download-cv-btn {
+    position: relative;
     width: 185px;
     height: 49px;
     border: 2px solid black;
@@ -47,11 +48,58 @@
     background: none;
     color: black;
     font-weight: 800;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+  }
+  
+  .download-cv-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transform: skewX(-40deg);
+    z-index: -1;
+  }
+  
+  .download-cv-btn:hover {
+    background: linear-gradient(45deg, #007BFF, #9b5de5);
+    color: white;
+    transform: scale(1.07);
+    border-color: #ffffff;
+    box-shadow: 0 0 30px rgba(155, 93, 229, 0.5);
+    filter: brightness(1.1);
+  }
+  
+  .download-cv-btn:hover::before {
+    animation: shine 2.5s infinite ease-in-out;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
 .download-icon {
     font-size: 20px;
     margin-right: 10px;
@@ -90,4 +138,37 @@
     font-size: 17px;
     letter-spacing: 2px;
     margin-bottom: 5px;
+}
+
+.why-me-ul {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 15px;
+
+    @media (max-width: 700px) {
+        justify-content: center;
+    }
+}
+
+.why-me-li {
+    width: 25%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 27px;
+    color: black;
+    text-align: center;
+
+    @media (max-width: 700px) {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+.why-me-span {
+    font-weight: bold;
+    margin-bottom: 10px;
 }

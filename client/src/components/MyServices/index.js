@@ -18,7 +18,7 @@ const MyServicesItems = [
     {id: 1, name: 'Full Stack', brief: 'I deliver complete, scalable web solutions — blending sleek, responsive design with powerful, production-ready backend systems. One place. End-to-end.', icon: GiFullWoodBucket},
     {id: 2, name: 'MERN Stack', brief: 'Built with the power of MERN — I craft full-stack solutions that are fast, flexible, and future-ready. From UI to database, it all happens here.', icon: FiLayers},
     {id: 3, name: 'Web Design' ,brief: 'I craft visually striking web pages with user-focused designs and creative ideas that leave a lasting impression — turning vision into pixel-perfect reality', icon: FaPaintBrush},
-    {id: 5, name: "Performance Optimization", brief: "I fine-tune every line of code to ensure blazing-fast load times, smooth interactions, and top-tier performance across devices. Speed isn’t optional — it's built in.", icon: ImPower},
+    {id: 4, name: "Performance Optimization", brief: "I fine-tune every line of code to ensure blazing-fast load times, smooth interactions, and top-tier performance across devices. Speed isn’t optional — it's built in.", icon: ImPower},
     {id: 5, name: 'Timely Delivery', brief: 'I value your time as much as your vision. Expect precise, efficient delivery — always on schedule, never in compromise.', icon: CiClock1}
 ]
 
@@ -30,7 +30,7 @@ const MyServices = () => {
         })
       }, [])
     return (
-        <div id="my-service" className='my-service-container'>
+        <div id="my service" className='my-service-container'>
         <Heading>My Services</Heading> <hr className="second-line " />
         <ul className="my-service-ul">
             {MyServicesItems.map((each, index) => {

@@ -3,7 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
 
 const AnimatedProgressBar = ({ percent, color = "grey", strokeWidth = 2 }) => {
-  const { ref, inView } = useInView({ triggerOnce: false });
+  const { ref, inView } = useInView({ triggerOnce: true });
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {

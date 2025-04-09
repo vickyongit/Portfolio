@@ -150,8 +150,22 @@
      }
 }
 
-.social-icons {
+.social-icons-email {
     font-size: 30px;
     margin-right: 20px;
     color: black;
+}
+
+.social-icons-linkedin {
+    font-size: 30px;
+    margin-right: 20px;
+    color: black;
+}
+
+.social-icons-email:hover {
+    color: #D14836;
+}
+
+.social-icons-linkedin:hover {
+    color: #0077B5;
 }
