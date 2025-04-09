@@ -37,7 +37,7 @@ const Contact = () => {
         })
     } else {
         alert("Hey! You've already reached out 🙂 I'll get back to you soon!.")
-        form.current.reset()
+form.current.reset()
     }
     }
 

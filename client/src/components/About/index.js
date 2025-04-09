@@ -65,7 +65,7 @@ This is just the beginning.
         </div>
         <ul className='why-me-ul'>
             <li className='why-me-li'>
-                <span className='why-me-span'> <AnimatedCounter end={600}/> </span> < br />
+                <span className='why-me-span'> <AnimatedCounter end={1000}/> </span> < br />
                 Hours of Coding
             </li>
             <li className='why-me-li'>
@@ -73,7 +73,7 @@ This is just the beginning.
                 Problems Solved
             </li>
             <li className='why-me-li'>
-            <span className='why-me-span'> <AnimatedCounter end={12}/> </span> <br />
+            <span className='why-me-span'> <AnimatedCounter end={7}/> </span> <br />
                 Certified Courses
             </li>
         </ul>
