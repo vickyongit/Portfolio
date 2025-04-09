@@ -8,7 +8,7 @@ const Project = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        const url = 'http://localhost:3001/projects';
+        const url = 'https://vigneshbk-portfolio.vercel.app/projects';
         axios.get(url)
             .then((res) => {
                 setProjects(res.data);
