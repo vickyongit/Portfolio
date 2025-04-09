@@ -43,7 +43,7 @@ form.current.reset()
 
     return (
     <div id="contact" className='contact-container'>
-        <Heading>Contact</Heading> <hr className='second-line' />
+        <Heading>Let's Connect</Heading> <hr className='second-line' />
         <form ref={form} onSubmit={sendEmail} className='contact-card'>
             <input autoComplete='on' className='input-element' name="name"  type="text" placeholder='Name / Company' required/>
             <input className='input-element' name="ph_number"  type="number" placeholder='Phone Number (Optional)'/>

@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 import './index.css'
 
-const navLinkItems = ['Home', 'About', 'My Portfolio','Skills', 'My Service','Contact']
+const navLinkItems = ['Home', 'About', 'My Projects','Skills', 'What I Do','Let’s Connect']
 
 const Header = () => {
   const [isHeroVisible, setIsHeroVisible] = useState(true)

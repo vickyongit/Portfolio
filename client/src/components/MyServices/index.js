@@ -31,7 +31,7 @@ const MyServices = () => {
       }, [])
     return (
         <div id="my service" className='my-service-container'>
-        <Heading>My Services</Heading> <hr className="second-line " />
+        <Heading>How I Can Help</Heading> <hr className="second-line " />
         <ul className="my-service-ul">
             {MyServicesItems.map((each, index) => {
                 const Icon = each.icon
