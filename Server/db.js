@@ -59,14 +59,14 @@ db.serialize(() => {
           'https://trendsetterviki.ccbp.tech',
           'logo'
         ],
-      [
+        [
         'My Portfolio Website',
         'An interactive, animated single-page application showcasing my web development projects, skills, and services. Built with the MERN stack and designed with engaging scroll effects, smooth transitions, and responsive layout for a dynamic user experience.',
         'React.js, Node.js, Express.js, SQLite, JavaScript, CSS Animations',
         'git_hub_link',
         'https://vigneshbk-portfolio.vercel.app',
         'logo'
-      ]
+        ]
       ]
       
 
