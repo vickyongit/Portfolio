@@ -58,7 +58,24 @@ db.serialize(() => {
           'git_hub_link',
           'https://trendsetterviki.ccbp.tech',
           'logo'
-        ]
+        ],
+        [
+          'Trend Setter',
+          'A modern shopping experience with real-time product listings, smooth cart interactions. Built with precision for reliability, authentication, and responsiveness across devices to deliver a retail-like feel.',
+          'React.js, Node.js, Express.js, SQLite, JavaScript',
+          'git_hub_link',
+          'https://trendsetterviki.ccbp.tech',
+          'logo'
+
+      ],
+      [
+        'My Portfolio Website',
+        'An interactive, animated single-page application showcasing my web development projects, skills, and services. Built with the MERN stack and designed with engaging scroll effects, smooth transitions, and responsive layout for a dynamic user experience.',
+        'React.js, Node.js, Express.js, SQLite, JavaScript, CSS Animations',
+        'git_hub_link',
+        'https://vigneshbk-portfolio.vercel.app',
+        'logo'
+      ]
       ]
       
 
