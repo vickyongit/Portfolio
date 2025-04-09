@@ -23,11 +23,11 @@ const Project = () => {
     <div id="my portfolio" className='project-container'>
         <Heading>Here are the projects I've worked on</Heading> <hr className='second-line' />
         <ul className='projects-ul-container'>
-            {projects.map(each => (
+            {projects.map((each, index) => (
                 <li className='project-li' key={each.id}>              
                     <h1 className='project-title'>{each.title}</h1>
                     <p className='project-description'>{each.description}</p>
-                    <p className='project-description'>Username: rahul, Password: rahul@2021</p>
+                    {(projects.length - 1 )!== index &&  <p className='project-description'>Username: rahul, Password: rahul@2021</p>}
                     <a href={each.live_link} target="_black" rel='noopener noreferrer' className='anchor-element'>
                     <div className='hover-overlay'>
                         Click To View    
