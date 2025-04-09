@@ -47,7 +47,7 @@ form.current.reset()
         <form ref={form} onSubmit={sendEmail} className='contact-card'>
             <input autoComplete='on' className='input-element' name="name"  type="text" placeholder='Name / Company' required/>
             <input className='input-element' name="ph_number"  type="number" placeholder='Phone Number (Optional)'/>
-            <input autoComplete='on' className='input-element' name="email" type="email" placeholder='Email' required/>
+            <input autoComplete='on' className='input-element' name="email" type="email" placeholder='Enter Your Email' required/>
             <input className='input-element' name="subject" type="text" placeholder='Subject' required/>
             <textarea className='textarea-element' name="message" placeholder='Message:' required/>
             <button type="submit" className='send-message-btn'>Send Message</button>

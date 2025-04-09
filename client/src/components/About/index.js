@@ -69,11 +69,11 @@ This is just the beginning.
                 Hours of Coding
             </li>
             <li className='why-me-li'>
-            <span className='why-me-span'> <AnimatedCounter end={12700}/> </span> <br />
+            <span className='why-me-span'> <AnimatedCounter end={4000}/> </span> <br />
                 Problems Solved
             </li>
             <li className='why-me-li'>
-            <span className='why-me-span'> <AnimatedCounter end={7}/> </span> <br />
+            <span className='why-me-span'> <AnimatedCounter end={8}/> </span> <br />
                 Certified Courses
             </li>
         </ul>
