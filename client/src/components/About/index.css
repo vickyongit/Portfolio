@@ -1,7 +1,7 @@
 .about-container {
     padding: 30px;
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       padding: 15px;
     }
 }
@@ -9,7 +9,7 @@
 .flex-container {
     display: flex;
     align-items: center;
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
         flex-direction: column;
         margin: 0px;
     }
@@ -17,8 +17,8 @@
 
 .about-paragraph-container {
     width: 49%;
-    @media (max-width: 700px) {
-        width: 100%;
+    @media (max-width: 800px) {
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -37,6 +37,11 @@
         font-size: 13px;
         text-align: center;
     }
+
+    @media (max-width: 800px) {
+      font-size: 14px;
+      text-align: center;
+  }
 }
 
 .download-cv-btn {
@@ -110,7 +115,7 @@
     display: flex;
     justify-content: center;
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       width: 100%;
     }
 }
