@@ -65,7 +65,7 @@ db.serialize(() => {
         'React.js, Node.js, Express.js, SQLite, JavaScript, CSS Animations',
         'git_hub_link',
         'https://vigneshbk-portfolio.vercel.app',
-        'logo'
+        'logos'
         ]
       ]
       
