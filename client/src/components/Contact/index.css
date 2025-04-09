@@ -38,6 +38,7 @@
     align-self: center;
     padding: 10px;
     background: none;
+    outline: none;
 }
 
 .send-message-btn {
