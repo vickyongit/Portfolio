@@ -10,7 +10,6 @@ const db = new sqlite3.Database(path.resolve(__dirname, 'portfolio.db'), (err) =
 });
 
 db.serialize(() => {
-    db.run('DROP TABLE IF EXISTS projects')
   db.run(`
     CREATE TABLE IF NOT EXISTS projects (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
