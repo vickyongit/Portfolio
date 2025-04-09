@@ -11,7 +11,6 @@ const Project = () => {
         const url = 'https://vigneshbk-api-portfolio.onrender.com/projects';
         axios.get(url)
             .then((res) => {
-                console.log(res.data);
                 setProjects(res.data);
             })
             .catch((err) => {
