@@ -10,7 +10,7 @@ import useHashScroll from '../Hooks/useHashScroll'
 import './index.css'
 
 const Main = () => {
-    useHashScroll(['/', 'about', 'my-portfolio', 'my-service', 'skills', 'contact'])
+    useHashScroll(['/', 'about', 'my-projects', 'my-service', 'skills', 'contact'])
     return (
         <div className='main-container'>
             <Header />

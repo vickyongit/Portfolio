@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 import './index.css'
 
-const navLinkItems = ['Home', 'About', 'My Projects','Skills', 'What I Do','Let’s Connect']
+const navLinkItems = ['Home', 'About', 'My Projects','Skills', 'What I Do',"Let's Connect"]
 
 const Header = () => {
   const [isHeroVisible, setIsHeroVisible] = useState(true)
@@ -19,7 +19,7 @@ const Header = () => {
       },
       {
         root: null,
-        threshold: 0.4, // Adjust based on when you want the header to fix
+        threshold: 0.4,
       }
     )
 

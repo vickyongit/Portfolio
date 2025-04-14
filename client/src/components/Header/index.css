@@ -2,7 +2,7 @@
     position: relative;
     top: 0;
     left: 0;
-    background-color: rgba(5, 5, 5, 0.85); /* Deeper black */
+    background-color: rgba(10, 10, 10, 0.95);/* Deeper black */
     border-bottom: 2px solid rgba(255, 255, 255, 0.05);
     padding: 15px 20px;
     overflow: hidden;
@@ -134,7 +134,7 @@
 
     @media (max-width: 800px) {
         display: flex;
-        margin-right: 40px;
+        margin-right: 20px;
     }
 }
 
