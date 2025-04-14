@@ -82,3 +82,10 @@
     line-height: 20px;
     margin-bottom: 0px;
 }
+
+.loader {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

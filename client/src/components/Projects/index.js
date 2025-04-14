@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import {BallTriangle} from 'react-loader-spinner'
 import axios from 'axios'
 
 import Heading from '../StyledComponents'
@@ -22,6 +23,18 @@ const Project = () => {
     return (
     <div id="my portfolio" className='project-container'>
         <Heading>Here are the projects I've worked on</Heading> <hr className='second-line' />
+        {projects.length === 0 ?  
+            <div className='loader'>     
+                <BallTriangle
+                    height="100"
+                    width="100"
+                    color="black"
+                    ariaLabel="tail-spin-loading"
+                    radius="1"
+                    visible={true}
+                />
+            </div>
+        :         
         <ul className='projects-ul-container'>
             {projects.map((each, index) => (
                 <li className='project-li' key={each.id}>              
@@ -35,7 +48,8 @@ const Project = () => {
                     </a>
                 </li>
             ))}
-        </ul>
+ </ul>}
+
     </div>
     )
 }
