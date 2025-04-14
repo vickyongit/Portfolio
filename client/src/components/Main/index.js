@@ -16,7 +16,7 @@ const Main = () => {
             <Header />
             <div id="/"><HeroPage /></div>
             <div id="about"><About /></div>
-            <div id="my-portfolio"><Projects /></div>
+            <div id="my-projects"><Projects /></div>
             <div id="skills"><Skills /> </div>
             <div id="my-service"><MyServices  /></div>
             <div id="contact"><Contact /></div>

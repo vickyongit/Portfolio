@@ -37,7 +37,7 @@ const skillsList = [
   ]
 
   const Skills = () => (
-    <div id="skills" className='skills-container'>
+    <div className='skills-container'>
         <Heading>Skills</Heading> <hr className='second-line'></hr>
     <ul className='skills-ul'>
     {skillsList.map(each => (

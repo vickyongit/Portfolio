@@ -30,7 +30,7 @@ const MyServices = () => {
         })
       }, [])
     return (
-        <div id="my service" className='my-service-container'>
+        <div className='my-service-container'>
         <Heading>How I Can Help</Heading> <hr className="second-line " />
         <ul className="my-service-ul">
             {MyServicesItems.map((each, index) => {

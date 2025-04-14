@@ -21,7 +21,7 @@ const Project = () => {
         
 
     return (
-    <div id="my portfolio" className='project-container'>
+    <div id="my projects" className='project-container'>
         <Heading>Here are the projects I've worked on</Heading> <hr className='second-line' />
         {projects.length === 0 ?  
             <div className='loader'>     

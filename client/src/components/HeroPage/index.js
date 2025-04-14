@@ -3,7 +3,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import "./index.css";
 
 const HomePage = () => (
-    <div id="home" className="hero-page">
+    <div className="hero-page">
         <div className="hero-intro-container">
             <div className="info-container">
                 <p className="greeting">
