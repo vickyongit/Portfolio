@@ -1,4 +1,4 @@
-import Heading  from '../StyledComponents'
+import { Heading } from '../StyledComponents'
 import './index.css'
 
 const skillsList = [

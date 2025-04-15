@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
-import Heading from '../StyledComponents'
+import {Heading}from '../StyledComponents'
 import './index.css'
 
 const Contact = () => {

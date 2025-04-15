@@ -3,7 +3,7 @@ import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 
 
-import Heading from '../StyledComponents'
+import {Heading} from '../StyledComponents'
 import { AiOutlineGlobal } from "react-icons/ai";
 import { GiFullWoodBucket } from "react-icons/gi";
 import { FiLayers } from "react-icons/fi";

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import {BallTriangle} from 'react-loader-spinner'
 import axios from 'axios'
 
-import Heading from '../StyledComponents'
+import {Heading} from '../StyledComponents'
+import {LoaderWrapper, LoaderContainer, Dot} from '../StyledComponents'
 import './index.css'
 
 const Project = () => {
@@ -25,14 +25,14 @@ const Project = () => {
         <Heading>Here are the projects I've worked on</Heading> <hr className='second-line' />
         {projects.length === 0 ?  
             <div className='loader'>     
-                <BallTriangle
-                    height="100"
-                    width="100"
-                    color="black"
-                    ariaLabel="tail-spin-loading"
-                    radius="1"
-                    visible={true}
-                />
+                    <LoaderWrapper>
+                        <LoaderContainer>
+                            <Dot delay="0s" />
+                            <Dot delay="0.2s" />
+                            <Dot delay="0.4s" />
+                            <Dot delay="0.6s" />
+                        </LoaderContainer>
+                    </LoaderWrapper>
             </div>
         :         
         <ul className='projects-ul-container'>

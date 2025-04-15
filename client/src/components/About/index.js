@@ -1,6 +1,6 @@
 import { Element } from 'react-scroll';
 
-import Heading from '../StyledComponents';
+import {Heading} from '../StyledComponents';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
 
 import AnimatedProgressBar from '../AnimatedProgressBar';
