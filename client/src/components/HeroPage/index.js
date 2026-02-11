@@ -23,7 +23,7 @@ const HomePage = () => (
             </div>
             </div>
             <div className="image-container">
-            <img src="https://res.cloudinary.com/dwz6ouiqm/image/upload/v1743831004/1000160932_lmvrwt.png" alt="hero img" className="hero-img"/>
+            <img src="https://res.cloudinary.com/dwz6ouiqm/image/upload/v1743776565/1000155581_j383fy.jpg" alt="hero img" className="hero-img"/>
             <hr className="line" />
             </div> 
         </div>
