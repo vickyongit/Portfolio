@@ -11,7 +11,7 @@ const HomePage = () => (
                 </p>
             <h1 className="hero-name">Vignesh Bk</h1>
             <hr className="line" />
-            <p className="job-role">Full Stack Developer</p>
+            <p className="job-role">Full Stack Developer (MERN) | AI & Automation Enthusiast</p>
             <hr className="line" />
             <div className="social-media-icons-container">
                 <a href="mailto:vignesh.bkprof@gmail.com" target="_blank" rel="noopener noreferrer">

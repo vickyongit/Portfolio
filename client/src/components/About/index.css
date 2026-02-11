@@ -1,179 +1,354 @@
-.about-container {
-    padding: 30px;
+/* ======================================================
+   ABOUT SECTION — ULTRA PRO MAX BLUE DNA SYSTEM
+   ====================================================== */
 
-    @media (max-width: 800px) {
-      padding: 15px;
-    }
+.about-container {
+  position: relative;
+  padding: 90px 50px;
+  background: #f8f9ff;
+  overflow: hidden;
 }
+
+/* ===============================
+   DNA BACKGROUND — DEEP WAVES
+   =============================== */
+
+.about-container::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(79,70,229,0.25), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(34,211,238,0.22), transparent 45%);
+  animation: dnaDrift 30s linear infinite;
+  z-index: 0;
+}
+
+/* ===============================
+   DNA BACKGROUND — FLOWING ENERGY
+   =============================== */
+
+.about-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(79,70,229,0.18),
+    rgba(34,211,238,0.18),
+    transparent 80%
+  );
+  background-size: 400% 400%;
+  animation: dnaFlow 18s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes dnaDrift {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(6%, -4%); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes dnaFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ======================================================
+   LAYOUT
+   ====================================================== */
 
 .flex-container {
-    display: flex;
-    align-items: center;
-    @media (max-width: 800px) {
-        flex-direction: column;
-        margin: 0px;
-    }
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 70px;
+  align-items: stretch;
 }
 
+@media (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+/* ======================================================
+   LEFT PANEL — STORY GLASS
+   ====================================================== */
+
 .about-paragraph-container {
-    width: 49%;
-    @media (max-width: 800px) {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  width: 50%;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  padding: 42px;
+  box-shadow:
+    0 40px 80px rgba(79,70,229,0.18),
+    inset 0 0 0 1px rgba(255,255,255,0.65);
+}
+
+@media (max-width: 900px) {
+  .about-paragraph-container {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .about {
-    font-family: 'Roboto';
-    line-height: 25px;
-    color: grey;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-
-    @media (max-width: 700px) {
-        font-size: 13px;
-        text-align: center;
-    }
-
-    @media (max-width: 800px) {
-      font-size: 14px;
-      text-align: center;
-  }
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 0.6px;
+  color: #374151;
+  margin-bottom: 36px;
 }
+
+/* ======================================================
+   DOWNLOAD BUTTON — DNA CORE
+   ====================================================== */
 
 .download-cv-btn {
-    position: relative;
-    width: 185px;
-    height: 49px;
-    border: 2px solid black;
-    border-radius: 14px;
-    background: none;
-    color: black;
-    font-weight: 800;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s ease-in-out;
-    z-index: 1;
-  }
-  
-  .download-cv-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255, 255, 255, 0.4),
-      transparent
-    );
-    transform: skewX(-40deg);
-    z-index: -1;
-  }
-  
-  .download-cv-btn:hover {
-    background: linear-gradient(45deg, #007BFF, #9b5de5);
-    color: white;
-    transform: scale(1.07);
-    border-color: #ffffff;
-    box-shadow: 0 0 30px rgba(155, 93, 229, 0.5);
-    filter: brightness(1.1);
-  }
-  
-  .download-cv-btn:hover::before {
-    animation: shine 2.5s infinite ease-in-out;
-  }
-  
-  @keyframes shine {
-    0% {
-      left: -100%;
-    }
-    50% {
-      left: 100%;
-    }
-    100% {
-      left: 100%;
-    }
-  }
-  
-.download-icon {
-    font-size: 20px;
-    margin-right: 10px;
+  position: relative;
+  height: 54px;
+  padding: 0 28px;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #4f46e5, #22d3ee);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 13px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  overflow: hidden;
+  transition: all 0.45s ease;
 }
+
+.download-cv-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.55),
+    transparent
+  );
+  transform: translateX(-130%);
+}
+
+.download-cv-btn:hover::before {
+  animation: shine 2.8s infinite;
+}
+
+.download-cv-btn:hover {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow:
+    0 30px 60px rgba(79,70,229,0.5),
+    0 0 40px rgba(34,211,238,0.45);
+}
+
+@keyframes shine {
+  0%   { transform: translateX(-130%); }
+  50%  { transform: translateX(130%); }
+  100% { transform: translateX(130%); }
+}
+
+.download-icon {
+  font-size: 20px;
+}
+
+/* ======================================================
+   RIGHT PANEL — DNA TRACK SYSTEM
+   ====================================================== */
 
 .specialized-in-container {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-
-    @media (max-width: 800px) {
-      width: 100%;
-    }
+  width: 50%;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  padding: 42px;
+  box-shadow:
+    0 40px 80px rgba(34,211,238,0.18),
+    inset 0 0 0 1px rgba(255,255,255,0.65);
 }
 
+@media (max-width: 900px) {
+  .specialized-in-container {
+    width: 100%;
+  }
+}
 
 .specialized-in-ul {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    list-style-type: none;
-
-    @media (max-width: 700px) {
-        width: 80%;
-        padding: 0px;
-    }
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px; /* tightened spacing */
 }
 
-.specialized-in-li {
-    margin-bottom: 10px;
+/* ===============================
+   DNA TRACK ITEM
+   =============================== */
+
+.specialized-track {
+  position: relative;
 }
 
-.specialized-in-txt {
-    color: black;
-    font-family: 'Bree Serif';
-    font-size: 17px;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
+.specialized-track:not(:last-child)::after {
+  content: '';
+  display: block;
+  margin-top: 18px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79,70,229,0.15),
+    transparent
+  );
 }
+
+/* Title */
+.track-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+/* Rail */
+.dna-track {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  border-radius: 30px;
+  background: rgba(15,23,42,0.12);
+  overflow: hidden;
+}
+
+/* Rail energy */
+.dna-track::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(79,70,229,0.35),
+    rgba(34,211,238,0.35),
+    transparent
+  );
+  background-size: 300% 300%;
+  animation: railFlow 12s linear infinite;
+}
+
+@keyframes railFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Fill */
+.dna-fill {
+  position: absolute;
+  inset: 0;
+  width: 90%;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #4f46e5, #22d3ee);
+  box-shadow:
+    0 0 22px rgba(79,70,229,0.9);
+  animation: fillPulse 4s ease-in-out infinite;
+}
+
+.dna-fill.ai { width: 88%; }
+.dna-fill.api { width: 92%; }
+
+@keyframes fillPulse {
+  0%,100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+/* Description */
+.track-desc {
+  margin-top: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #475569;
+}
+
+/* ======================================================
+   WHY ME — STATS CARDS
+   ====================================================== */
 
 .why-me-ul {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    list-style-type: none;
-    gap: 15px;
+  position: relative;
+  z-index: 2;
+  margin-top: 90px;
+  padding: 0;
+  list-style: none;
 
-    @media (max-width: 700px) {
-        justify-content: center;
-    }
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
 }
 
 .why-me-li {
-    width: 25%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 27px;
-    color: black;
-    text-align: center;
+  width: 260px;
+  padding: 36px 24px;
+  border-radius: 26px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(18px);
+  text-align: center;
 
-    @media (max-width: 700px) {
-        width: 80%;
-        margin-bottom: 20px;
-    }
+  box-shadow:
+    0 30px 60px rgba(79,70,229,0.2);
+
+  transition: all 0.45s ease;
+}
+
+.why-me-li:hover {
+  transform: translateY(-12px);
+  box-shadow:
+    0 45px 90px rgba(79,70,229,0.45);
 }
 
 .why-me-span {
-    font-weight: bold;
-    margin-bottom: 10px;
+  display: block;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 8px;
+
+  background: linear-gradient(90deg, #4f46e5, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ======================================================
+   MOBILE
+   ====================================================== */
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 70px 22px;
+  }
+
+  .why-me-li {
+    width: 100%;
+  }
 }

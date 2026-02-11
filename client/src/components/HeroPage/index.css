@@ -1,171 +1,238 @@
+/* ===============================
+   CINEMATIC BACKGROUND ANIMATION
+   =============================== */
+
 @keyframes ultraDarkWave {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-
+/* ===============================
+   HERO PAGE
+   =============================== */
 
 .hero-page {
-    height: 700px;
-    animation: ultraDarkWave 10s ease infinite;
-    overflow: hidden;
-    padding: 0px;
-    margin: 0px;
-    background: linear-gradient(135deg, #ffffff, #eeeeee);
-
-    @media (max-width: 700px) {
-        min-height: 800px;   
-     }
-
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #f8f9ff,
+    #eef1ff,
+    #ffffff
+  );
+  background-size: 400% 400%;
+  animation: ultraDarkWave 14s ease infinite;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
+/* ===============================
+   HERO CONTAINER
+   =============================== */
 
-.hero-intro-container{
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    height: 700px;
-    margin-top: 30px;
-    display: flex;
-
-    @media (max-width: 700px) {
-      flex-direction: column;
-    }
+.hero-intro-container {
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
 }
+
+@media (max-width: 700px) {
+  .hero-intro-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+}
+
+/* ===============================
+   LEFT CONTENT
+   =============================== */
 
 .info-container {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-
-    @media (max-width: 700px) {
-     order: 1;
-     width: 90%;
-    }
-
-    @media ((min-width: 701px) and (max-width: 1000px) ) {
-        width: 40%;
-    }
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.image-container {
-    width: 50%;
-    text-align: center;
-
-    @media (max-width: 700px) {
-    order: 0;
+@media (max-width: 700px) {
+  .info-container {
     width: 100%;
-    margin: 0px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    }
-
-    @media ((min-width: 701px) and (max-width: 1000px) ) {
-        width: 55%;
-        z-index: 1;
-    }
+    order: 1;
+    text-align: center;
+  }
 }
+
+/* ===============================
+   GREETING
+   =============================== */
 
 .greeting {
-    color: grey;
-    font-size: 27px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    margin-left: 20px;
-
-    @media (max-width: 700px) {
-        font-size: 23px;
-        margin-left: 0px;
-    }
+  font-size: 26px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 
+/* ===============================
+   NAME – HERO IMPACT
+   =============================== */
 
 .hero-name {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 95px;
-    color: black;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    padding: 0px;
-    margin: 0px;
-    margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin: 0;
 
-    @media (max-width: 700px) {
-        font-size: 50px;
-    }
-    
+  background: linear-gradient(
+    90deg,
+    #111827,
+    #4f46e5,
+    #111827
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: nameGlow 6s ease infinite;
+
+  text-shadow:
+    0 20px 40px rgba(79, 70, 229, 0.25);
 }
+
+@keyframes nameGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 700px) {
+  .hero-name {
+    font-size: 52px;
+  }
+}
+
+/* ===============================
+   ROLE
+   =============================== */
 
 .job-role {
-    color: grey;
-    font-size: 25px;
-    letter-spacing: 10px;
-    margin: 15px;
-
-    @media (max-width: 700px) {
-        font-size: 20px;
-        white-space: wrap;  
-        letter-spacing: 6px;
-        text-align: center;
-     }
+  font-size: 22px;
+  letter-spacing: 4px;
+  color: #6b7280;
+  margin: 18px 0;
+  font-weight: 500;
 }
+
+@media (max-width: 700px) {
+  .job-role {
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+}
+
+/* ===============================
+   DIVIDER
+   =============================== */
 
 .line {
-    color: grey;
-    width: 100%;
-    
-    @media (max-width: 700px) {
-        margin-top: 0px;
-    }
+  border: none;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #6366f1,
+    transparent
+  );
+  margin: 20px 0;
 }
 
-.hero-img {
-    padding: 0px;
-    width:80%;
-    height: 98%;
-    margin-bottom: 0px;
-
-    @media ((min-width: 701px) and (max-width: 1000px) ) {
-        width: 100%;
-    }
- }
+/* ===============================
+   SOCIAL ICONS
+   =============================== */
 
 .social-media-icons-container {
-    display: flex;
-    margin-left: 20px;
-    margin-top: 10px;
-
-    @media (max-width: 700px) {
-        justify-content: center;
-     }
+  display: flex;
+  gap: 22px;
+  margin-top: 20px;
 }
 
-.social-icons-email {
-    font-size: 30px;
-    margin-right: 20px;
-    color: black;
+@media (max-width: 700px) {
+  .social-media-icons-container {
+    justify-content: center;
+  }
 }
 
+.social-icons-email,
 .social-icons-linkedin {
-    font-size: 30px;
-    margin-right: 20px;
-    color: black;
+  font-size: 32px;
+  color: #111827;
+  transition: all 0.4s ease;
 }
 
 .social-icons-email:hover {
-    color: #D14836;
+  color: #d14836;
+  transform: translateY(-6px) scale(1.15);
 }
 
 .social-icons-linkedin:hover {
-    color: #0077B5;
+  color: #0077b5;
+  transform: translateY(-6px) scale(1.15);
+}
+
+/* ===============================
+   RIGHT IMAGE
+   =============================== */
+
+.image-container {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  .image-container {
+    width: 100%;
+    order: 0;
+    margin-bottom: 30px;
+  }
+}
+
+/* ===============================
+   HERO IMAGE – FLOATING
+   =============================== */
+
+.hero-img {
+  width: 80%;
+  max-width: 420px;
+  border-radius: 24px;
+  animation: heroFloat 6s ease-in-out infinite;
+
+  box-shadow:
+    0 40px 80px rgba(79, 70, 229, 0.35),
+    0 0 60px rgba(99, 102, 241, 0.25);
+}
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-16px);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-img {
+    width: 70%;
+  }
 }

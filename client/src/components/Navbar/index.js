@@ -9,7 +9,7 @@ import useHashScroll from '../Hooks/useHashScroll'
 
 import './index.css'
 
-const Main = () => {
+const Navbar = () => {
     useHashScroll(['/', 'about', 'my-projects', 'my-service', 'skills', 'contact'])
     return (
         <div className='main-container'>
@@ -25,4 +25,4 @@ const Main = () => {
 }
 
 
-export default Main
+export default Navbar

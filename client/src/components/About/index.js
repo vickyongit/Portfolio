@@ -2,8 +2,6 @@ import { Element } from 'react-scroll';
 
 import {Heading} from '../StyledComponents';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
-
-import AnimatedProgressBar from '../AnimatedProgressBar';
 import AnimatedCounter from '../AnimatedCounter';
 import './index.css';
 
@@ -21,6 +19,7 @@ const About = () => {
     <Element name="about">
       <div className="about-container">
         <Heading>Know Me Better</Heading> <hr className="second-line " />
+        <br />
         <div className="flex-container">
           <div className="about-paragraph-container">
             <p className="about">
@@ -45,29 +44,55 @@ const About = () => {
               Download My CV
             </button>
           </div>
-          <div className="specialized-in-container">
-            <ul className="specialized-in-ul">
-              <li className="specialized-in-li">
-                <p className="specialized-in-txt">Full Stack Web Develeper</p>
-                <AnimatedProgressBar percent={95} color="grey" />
-              </li>
+        <div className="specialized-in-container">
+          <ul className="specialized-in-ul">
 
-              <li className="specialized-in-li">
-                <p className="specialized-in-txt">Mern Stack Expertise</p>
-                <AnimatedProgressBar percent={95} color="grey" />
-              </li>
-              <li className="specialized-in-li">
-                <p className="specialized-in-txt">Web Designer</p>
-                <AnimatedProgressBar percent={68} color="grey" />
-              </li>
-            </ul>
-          </div>
+            <li className="specialized-track">
+              <div className="track-header">
+                <h4 className="track-title">Full Stack Engineering</h4>
+              </div>
+              <div className="dna-track">
+                <span className="dna-fill full"></span>
+              </div>
+              <p className="track-desc">
+                End-to-end systems using MERN & Flask with clean architecture and scalability.
+              </p>
+            </li>
+
+            <li className="specialized-track">
+              <div className="track-header">
+                <h4 className="track-title">AI & Automation Solutions</h4>
+              </div>
+              <div className="dna-track">
+                <span className="dna-fill ai"></span>
+              </div>
+              <p className="track-desc">
+                Intelligent workflows using LLMs, Generative AI, and n8n automations.
+              </p>
+            </li>
+
+            <li className="specialized-track">
+              <div className="track-header">
+                <h4 className="track-title">API & System Design</h4>
+              </div>
+              <div className="dna-track">
+                <span className="dna-fill api"></span>
+              </div>
+              <p className="track-desc">
+                Secure, scalable REST APIs with Node.js, Flask, MongoDB, and SQLite.
+              </p>
+            </li>
+
+          </ul>
+        </div>
+
+
         </div>
         <ul className="why-me-ul">
           <li className="why-me-li">
             <span className="why-me-span">
               {' '}
-              <AnimatedCounter end={1000} />{' '}
+              <AnimatedCounter end={3100} />{' '}
             </span>{' '}
             <br />
             Hours of Coding
