@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
 import { Heading } from '../StyledComponents'
@@ -7,21 +7,10 @@ import './index.css'
 
 const Contact = () => {
   const form = useRef(null)
-
-  const [userContacted, setUserContacted] = useState(false)
   const [showCinematic, setShowCinematic] = useState(false)
-
-  useEffect(() => {
-    const isUserContacted = Cookies.get('Contacted') || false
-    setUserContacted(isUserContacted)
-  }, [])
 
   const sendEmail = (e) => {
     e.preventDefault()
-
-    if (userContacted) {
-      return
-    }
 
     emailjs.sendForm(
       'service_e5z26au',
@@ -31,7 +20,6 @@ const Contact = () => {
     )
     .then(() => {
       Cookies.set('Contacted', true, { expires: 5 })
-      setUserContacted(true)
       form.current.reset()
 
       // 🎬 Trigger cinematic overlay
