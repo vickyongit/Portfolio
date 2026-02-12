@@ -23,6 +23,7 @@
   background-size: 400% 400%;
   animation: ultraDarkWave 14s ease infinite;
   overflow: hidden;
+
   display: flex;
   align-items: center;
 }
@@ -34,17 +35,12 @@
 .hero-intro-container {
   width: 100%;
   min-height: 700px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px;
-}
 
-@media (max-width: 700px) {
-  .hero-intro-container {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
+  padding: 60px;
 }
 
 /* ===============================
@@ -56,14 +52,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-@media (max-width: 700px) {
-  .info-container {
-    width: 100%;
-    order: 1;
-    text-align: center;
-  }
 }
 
 /* ===============================
@@ -100,6 +88,7 @@
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   animation: nameGlow 6s ease infinite;
 
   text-shadow:
@@ -112,12 +101,6 @@
   100% { background-position: 0% 50%; }
 }
 
-@media (max-width: 700px) {
-  .hero-name {
-    font-size: 52px;
-  }
-}
-
 /* ===============================
    ROLE
    =============================== */
@@ -128,13 +111,6 @@
   color: #6b7280;
   margin: 18px 0;
   font-weight: 500;
-}
-
-@media (max-width: 700px) {
-  .job-role {
-    font-size: 18px;
-    letter-spacing: 4px;
-  }
 }
 
 /* ===============================
@@ -162,12 +138,6 @@
   display: flex;
   gap: 22px;
   margin-top: 20px;
-}
-
-@media (max-width: 700px) {
-  .social-media-icons-container {
-    justify-content: center;
-  }
 }
 
 .social-icons-email,
@@ -199,14 +169,6 @@
   position: relative;
 }
 
-@media (max-width: 700px) {
-  .image-container {
-    width: 100%;
-    order: 0;
-    margin-bottom: 30px;
-  }
-}
-
 /* ===============================
    HERO IMAGE – FLOATING
    =============================== */
@@ -215,6 +177,7 @@
   width: 80%;
   max-width: 420px;
   border-radius: 24px;
+
   animation: heroFloat 6s ease-in-out infinite;
 
   box-shadow:
@@ -231,8 +194,91 @@
   }
 }
 
+/* ======================================================
+   MOBILE REFINEMENT — FULL FIX
+   ====================================================== */
+
 @media (max-width: 700px) {
+
+  .hero-page {
+    min-height: 100vh;
+    padding-top: 60px; /* space for fixed navbar */
+    align-items: flex-start;
+  }
+
+  .hero-intro-container {
+    min-height: auto;
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 24px;
+  }
+
+  /* Image first */
+  .image-container {
+    width: 100%;
+    order: 0;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
   .hero-img {
-    width: 70%;
+    width: 72%;
+    max-width: 280px;
+    border-radius: 20px;
+    animation: heroFloatMobile 6s ease-in-out infinite;
+  }
+
+  @keyframes heroFloatMobile {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Text */
+  .info-container {
+    width: 100%;
+    order: 1;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .greeting {
+    font-size: 18px;
+    margin-bottom: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .hero-name {
+    font-size: 38px;
+    letter-spacing: 2px;
+    line-height: 1.15;
+    text-shadow:
+      0 10px 24px rgba(79, 70, 229, 0.25);
+  }
+
+  .job-role {
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin: 12px 0;
+  }
+
+  .line {
+    width: 80%;
+    margin: 14px auto;
+  }
+
+  .social-media-icons-container {
+    margin-top: 14px;
+    gap: 18px;
+  }
+
+  .social-icons-email,
+  .social-icons-linkedin {
+    font-size: 26px;
   }
 }

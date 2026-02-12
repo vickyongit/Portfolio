@@ -5,6 +5,7 @@
 .skills-container {
   background: radial-gradient(circle at top, #f8f9ff, #ffffff);
   padding: 90px;
+  overflow-x: hidden;
 }
 
 /* ===============================
@@ -66,11 +67,13 @@
   backdrop-filter: blur(16px);
   border-radius: 22px;
   padding: 24px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 14px;
+
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -83,14 +86,10 @@
   animation: float 7s ease-in-out infinite;
 }
 
-/* Floating alive effect */
+/* Floating effect */
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 /* ===============================
@@ -155,7 +154,7 @@
 }
 
 /* ===============================
-   MOBILE OPTIMIZATION
+   RESPONSIVE TUNING
    =============================== */
 
 @media (max-width: 1024px) {
@@ -164,27 +163,47 @@
   }
 }
 
+/* Tablet */
 @media (max-width: 768px) {
   .skills-title {
     font-size: 22px;
   }
 
   .skills-ul {
-    gap: 30px;
+    gap: 28px;
   }
 
   .skill-card {
-    height: 155px;
+    height: 150px;
   }
 }
 
+/* ===============================
+   MOBILE — FORCE 3 PER ROW ✅
+   =============================== */
+
 @media (max-width: 480px) {
+  .skills-container {
+    padding: 60px 18px;
+  }
+
+  .skills-ul {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 16px;
+  }
+
   .skill-card {
-    height: 145px;
-    padding: 20px;
+    height: 120px;
+    width: 120px;
+    padding: 16px;
+    border-radius: 18px;
   }
 
   .skill-logo {
-    width: 52px;
+    width: 42px;
+  }
+
+  .skill-name {
+    font-size: 12px;
   }
 }

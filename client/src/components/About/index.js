@@ -23,17 +23,9 @@ const About = () => {
         <div className="flex-container">
           <div className="about-paragraph-container">
             <p className="about">
-              Started with curiosity, evolved through discipline, and shaped by
-              code. I began my journey driven by the desire to build — not just
-              interfaces, but seamless digital experiences. Over time, I've
-              grown into a full stack developer with strong roots in the MERN
-              stack and Python. On the front end, I craft interactive,
-              responsive UIs using React. On the back end, I design scalable
-              APIs with Node.js and Express, and work with MongoDB or SQLite for
-              efficient data handling. Python adds flexibility to my toolkit —
-              for scripting, backend logic, or solving complex problems with
-              clarity.Self-taught, self-driven, and always improving. I write
-              code to build, to learn, and to grow. This is just the beginning.
+              I’m a Full-Stack Developer and Software Development Instructor who builds scalable, production-ready applications and trains developers to do the same. With hands-on experience in MERN, Python, REST APIs, databases, payments, and AI-powered workflows, I focus on creating systems that are clean, fast, and built to scale.
+              <span style={{ display: 'block', marginBottom: '10px' }} />
+              Beyond building products, I’ve mentored and trained developers across frontend, backend, and Generative AI, helping them ship real-world applications with confidence. Self-driven, detail-oriented, and always evolving—I build with purpose, clarity, and impact.
             </p>
             <button
               onClick={handleDownload}

@@ -12,15 +12,51 @@ import { FaPaintBrush } from "react-icons/fa";
 import { CiClock1 } from "react-icons/ci";
 
 import './index.css'
-
 const MyServicesItems = [
-    {id: 0,name: 'Web Development', brief: "Crafting scalable web experiences — not just websites, From design to deployment, I deliver epic, high-performance solutions built to grow with your brand.", icon: AiOutlineGlobal},
-    {id: 1, name: 'Full Stack', brief: 'I deliver complete, scalable web solutions — blending sleek, responsive design with powerful, production-ready backend systems. One place. End-to-end.', icon: GiFullWoodBucket},
-    {id: 2, name: 'MERN Stack', brief: 'Built with the power of MERN — I craft full-stack solutions that are fast, flexible, and future-ready. From UI to database, it all happens here.', icon: FiLayers},
-    {id: 3, name: 'Web Design' ,brief: 'I craft visually striking web pages with user-focused designs and creative ideas that leave a lasting impression — turning vision into pixel-perfect reality', icon: FaPaintBrush},
-    {id: 4, name: "Performance Optimization", brief: "I fine-tune every line of code to ensure blazing-fast load times, smooth interactions, and top-tier performance across devices. Speed isn’t optional — it's built in.", icon: ImPower},
-    {id: 5, name: 'Timely Delivery', brief: 'I value your time as much as your vision. Expect precise, efficient delivery — always on schedule, never in compromise.', icon: CiClock1}
-]
+  {
+    id: 0,
+    name: 'Full Stack Engineering',
+    brief:
+      'Designing and building end-to-end web applications with clean architecture, scalable APIs, and production-ready frontends. From idea to deployment — done right.',
+    icon: GiFullWoodBucket
+  },
+  {
+    id: 1,
+    name: 'AI & Automation Solutions',
+    brief:
+      'Creating intelligent workflows using LLMs, Generative AI, and automation tools like n8n to eliminate manual work and boost productivity at scale.',
+    icon: ImPower
+  },
+  {
+    id: 2,
+    name: 'System & API Design',
+    brief:
+      'Architecting secure, scalable REST APIs and backend systems with Node.js, Express, Flask, MongoDB, and SQLite — built to handle real-world traffic.',
+    icon: FiLayers
+  },
+  {
+    id: 3,
+    name: 'Modern Frontend Development',
+    brief:
+      'Crafting fast, responsive, and interactive UIs using React with a strong focus on UX, performance, and maintainable component architecture.',
+    icon: AiOutlineGlobal
+  },
+  {
+    id: 4,
+    name: 'Performance & Optimization',
+    brief:
+      'Optimizing applications for speed, efficiency, and scalability — reducing load times, improving Lighthouse scores, and ensuring smooth user experiences.',
+    icon: CiClock1
+  },
+  {
+    id: 5,
+    name: 'Product-Focused Development',
+    brief:
+      'Building with a product mindset — understanding business goals, user needs, and long-term scalability to deliver solutions that actually create impact.',
+    icon: FaPaintBrush
+  }
+];
+
 
 const MyServices = () => {
     useEffect(() => {

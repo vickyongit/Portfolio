@@ -24,6 +24,12 @@
   z-index: 0;
 }
 
+@keyframes dnaDrift {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(6%, -4%); }
+  100% { transform: translate(0, 0); }
+}
+
 /* ===============================
    DNA BACKGROUND — FLOWING ENERGY
    =============================== */
@@ -45,13 +51,6 @@
   pointer-events: none;
 }
 
-/* Animations */
-@keyframes dnaDrift {
-  0%   { transform: translate(0, 0); }
-  50%  { transform: translate(6%, -4%); }
-  100% { transform: translate(0, 0); }
-}
-
 @keyframes dnaFlow {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
@@ -70,13 +69,6 @@
   align-items: stretch;
 }
 
-@media (max-width: 900px) {
-  .flex-container {
-    flex-direction: column;
-    gap: 50px;
-  }
-}
-
 /* ======================================================
    LEFT PANEL — STORY GLASS
    ====================================================== */
@@ -87,16 +79,10 @@
   backdrop-filter: blur(18px);
   border-radius: 28px;
   padding: 42px;
+
   box-shadow:
     0 40px 80px rgba(79,70,229,0.18),
     inset 0 0 0 1px rgba(255,255,255,0.65);
-}
-
-@media (max-width: 900px) {
-  .about-paragraph-container {
-    width: 100%;
-    text-align: center;
-  }
 }
 
 .about {
@@ -179,24 +165,20 @@
   backdrop-filter: blur(18px);
   border-radius: 28px;
   padding: 42px;
+
   box-shadow:
     0 40px 80px rgba(34,211,238,0.18),
     inset 0 0 0 1px rgba(255,255,255,0.65);
-}
-
-@media (max-width: 900px) {
-  .specialized-in-container {
-    width: 100%;
-  }
 }
 
 .specialized-in-ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
   display: flex;
   flex-direction: column;
-  gap: 26px; /* tightened spacing */
+  gap: 24px; /* tighter + balanced */
 }
 
 /* ===============================
@@ -210,7 +192,7 @@
 .specialized-track:not(:last-child)::after {
   content: '';
   display: block;
-  margin-top: 18px;
+  margin-top: 16px;
   height: 1px;
   background: linear-gradient(
     90deg,
@@ -220,17 +202,15 @@
   );
 }
 
-/* Title */
 .track-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 1.4px;
-  margin-bottom: 8px;
+  letter-spacing: 1.3px;
+  margin-bottom: 6px;
   color: #0f172a;
 }
 
-/* Rail */
 .dna-track {
   position: relative;
   width: 100%;
@@ -240,7 +220,6 @@
   overflow: hidden;
 }
 
-/* Rail energy */
 .dna-track::before {
   content: '';
   position: absolute;
@@ -262,15 +241,13 @@
   100% { background-position: 0% 50%; }
 }
 
-/* Fill */
 .dna-fill {
   position: absolute;
   inset: 0;
   width: 90%;
   border-radius: 30px;
   background: linear-gradient(90deg, #4f46e5, #22d3ee);
-  box-shadow:
-    0 0 22px rgba(79,70,229,0.9);
+  box-shadow: 0 0 22px rgba(79,70,229,0.9);
   animation: fillPulse 4s ease-in-out infinite;
 }
 
@@ -282,7 +259,6 @@
   50% { opacity: 1; }
 }
 
-/* Description */
 .track-desc {
   margin-top: 8px;
   font-family: 'Roboto', sans-serif;
@@ -298,19 +274,19 @@
 .why-me-ul {
   position: relative;
   z-index: 2;
-  margin-top: 90px;
+  margin-top: 80px;
   padding: 0;
   list-style: none;
 
   display: flex;
   justify-content: center;
-  gap: 36px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
 .why-me-li {
   width: 260px;
-  padding: 36px 24px;
+  padding: 34px 22px;
   border-radius: 26px;
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(18px);
@@ -323,7 +299,7 @@
 }
 
 .why-me-li:hover {
-  transform: translateY(-12px);
+  transform: translateY(-10px);
   box-shadow:
     0 45px 90px rgba(79,70,229,0.45);
 }
@@ -340,15 +316,63 @@
 }
 
 /* ======================================================
-   MOBILE
+   MOBILE — FULL REFINEMENT
    ====================================================== */
 
+@media (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+    gap: 42px;
+  }
+
+  .about-paragraph-container,
+  .specialized-in-container {
+    width: 80%;
+  }
+}
+
 @media (max-width: 600px) {
+
   .about-container {
-    padding: 70px 22px;
+    padding: 5px;
+  }
+
+  .flex-container{
+    align-items: center;
+  }
+
+  .about {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .about-paragraph-container,
+  .specialized-in-container {
+    width: 67%;
+  }
+
+  .download-cv-btn {
+    margin: 0 auto;
+  }
+
+  .specialized-in-ul {
+    gap: 20px;
+  }
+
+  .track-title {
+    font-size: 14px;
+  }
+
+  .why-me-ul {
+    margin-top: 60px;
+    gap: 24px;
   }
 
   .why-me-li {
     width: 100%;
+  }
+
+  .why-me-span {
+    font-size: 34px;
   }
 }

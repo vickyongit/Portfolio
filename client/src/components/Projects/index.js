@@ -18,7 +18,7 @@ const projectsData = [
     title: 'Nutlio',
     category: 'Full Stack / E-commerce',
     description:
-      'NutliO is a modern full-stack e-commerce platform designed to make purchasing premium dry fruits simple, secure, and seamless. It features role-based access, smooth checkout flow, and Razorpay integration for secure online payments.',
+      'Nutlio is a modern full-stack e-commerce platform designed to make purchasing premium dry fruits simple, secure, and seamless. It features role-based access, smooth checkout flow, and Razorpay integration for secure online payments.',
     tech_stack:
       'React.js, Node.js, Express.js, SQLite, JavaScript, Razorpay Payment Gateway, Google Authentication, JWT, REST APIs',
     live_link: 'https://nutliofoods.com',
@@ -85,7 +85,7 @@ const projectsData = [
 ];
 
 
-const Project = () => {
+const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -224,8 +224,9 @@ const Project = () => {
           </div>
         </div>
       ))}
+      <hr className="second-line" />
     </div>
   );
 };
 
-export default Project;
+export default Projects;

@@ -2,6 +2,16 @@ import { Heading } from '../StyledComponents'
 import './index.css'
 
 const skillsData = [
+    {
+    category: 'AI & Automation',
+    skills: [
+      { name: 'Generative AI', logo: 'https://img.icons8.com/fluency/96/artificial-intelligence.png' },
+      { name: 'LLMs', logo: 'https://img.icons8.com/fluency/96/brain.png' },
+      { name: 'Prompt Engineering', logo: 'https://img.icons8.com/fluency/96/chatbot.png' },
+      { name: 'n8n Automation', logo: 'https://img.icons8.com/fluency/96/workflow.png' },
+      { name: 'Vibe Coding', logo: 'https://img.icons8.com/fluency/96/code.png' }
+    ]
+  },
   {
     category: 'Frontend',
     skills: [
@@ -16,8 +26,9 @@ const skillsData = [
     category: 'Backend',
     skills: [
       { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-      { name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' },
-      { name: 'REST APIs', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' }
+      { name: 'Express.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+      { name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' }
+      
     ]
   },
   {
@@ -32,16 +43,6 @@ const skillsData = [
     skills: [
       { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
       { name: 'OOPS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' }
-    ]
-  },
-  {
-    category: 'AI & Automation',
-    skills: [
-      { name: 'Generative AI', logo: 'https://img.icons8.com/fluency/96/artificial-intelligence.png' },
-      { name: 'LLMs', logo: 'https://img.icons8.com/fluency/96/brain.png' },
-      { name: 'Prompt Engineering', logo: 'https://img.icons8.com/fluency/96/chatbot.png' },
-      { name: 'n8n Automation', logo: 'https://img.icons8.com/fluency/96/workflow.png' },
-      { name: 'Vibe Coding', logo: 'https://img.icons8.com/fluency/96/code.png' }
     ]
   },
   {
